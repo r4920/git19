@@ -3,13 +3,16 @@ import React from "react";
 import { Column } from "components/Column";
 import { Row } from "components/Row";
 import { Text } from "components/Text";
-import { Image } from "components/Image";
+import { Button } from "components/Button";
 
 const CoverPage = () => {
-  const handleNavigate2 = () => {
+  const handleNavigate1 = () => {
+    window.location.href = "sff.com";
+  };
+  const handleNavigate3 = () => {
     window.location.href = "facebook.com";
   };
-  const handleNavigate1 = () => {
+  const handleNavigate2 = () => {
     window.location.href = "linkedin.com";
   };
 
@@ -39,12 +42,13 @@ const CoverPage = () => {
           compType="Row"
         >
           <Text
-            className="2xl:ml-[60px] 2xl:text-fs23 3xl:ml-[72px] 3xl:text-fs27 font-normal lg:ml-[47px] lg:text-fs18 ml-[81px] opacity-op5 text-fs31 text-left text-white_A700 xl:ml-[54px] xl:text-fs20"
+            className="common-pointer 2xl:ml-[60px] 2xl:text-fs23 3xl:ml-[72px] 3xl:text-fs27 font-normal lg:ml-[47px] lg:text-fs18 ml-[81px] opacity-op5 text-fs31 text-left text-white_A700 xl:ml-[54px] xl:text-fs20"
             compId="252:5402"
             comWidth={80}
             compLeft={81}
             compRight={0}
             compType="Text"
+            onClick={handleNavigate1}
           >{`UX/UI`}</Text>
           <Text
             className="2xl:mr-[60px] 2xl:text-fs23 3xl:mr-[72px] 3xl:text-fs27 font-normal lg:mr-[47px] lg:text-fs18 mr-[81px] opacity-op5 text-fs31 text-right text-white_A700 xl:mr-[54px] xl:text-fs20"
@@ -55,17 +59,17 @@ const CoverPage = () => {
             compType="Text"
           >{`2021`}</Text>
         </Row>
-        <Image
-          src="img_telegram11.svg"
-          className="common-pointer 2xl:h-[154px] 2xl:mt-[135px] 3xl:h-[184px] 3xl:mt-[162px] h-[204px] lg:h-[119px] lg:mt-[105px] mt-[181px] mx-[auto] object-contain w-[11%] xl:h-[137px] xl:mt-[120px]"
+        <Button
+          className="common-pointer 2xl:mt-[135px] 3xl:mt-[162px] bg-transparent border-bw lg:mt-[105px] mt-[181px] mx-[auto] w-[11%] xl:mt-[120px]"
           compId="45:654"
           comWidth={204}
           compLeft={439}
           compRight={439}
-          compType="Image"
-          onClick={handleNavigate2}
-          alt="telegram11"
-        />
+          compType="Button"
+          onClick={handleNavigate3}
+        >
+          {""}
+        </Button>
         <Text
           className="2xl:mt-[63px] 2xl:text-fs98 3xl:mt-[76px] 3xl:text-fs117 font-semibold lg:mt-[49px] lg:text-fs76 mt-[85px] mx-[auto] text-center text-fs131 text-white_A700 tracking-ls1 xl:mt-[56px] xl:text-fs87"
           compId="45:653"
@@ -81,7 +85,7 @@ const CoverPage = () => {
           compLeft={439}
           compRight={439}
           compType="Text"
-          onClick={handleNavigate1}
+          onClick={handleNavigate2}
         >{`@dikaleto`}</Text>
       </Column>
     </Column>
