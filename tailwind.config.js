@@ -26,6 +26,7 @@ module.exports = {
         fs131: "131px",
       },
       opacity: { op5: 0.5 },
+      borderWidth: { bw: "none" },
       letterSpacing: { ls1: "1px" },
     },
   },
